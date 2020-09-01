@@ -1,0 +1,22 @@
+<template>
+  <h1>Header {{ title }}</h1>
+</template>
+
+<script>
+
+  export default {
+    name: 'Header',
+    props: {
+      title: {
+        type: String
+      }
+    },
+    methods: {
+
+    }
+  }
+</script>
+
+<style>
+
+</style>

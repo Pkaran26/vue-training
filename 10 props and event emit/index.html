@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <test v-bind:arr="arr" v-on:changearr="changeArr($event)"></test>
+      <test v-bind:arr="arr" v-on:changearr="changeArr($event)"></test>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>{{ name }}</h1>
+      <a v-bind:href="website">{{ website }}</a>
+      <a :href="website">{{ website }}</a>
+      <br/>
+      <input type="text" :value="name">
+      <br/>
+      <p v-html="websiteTag"></p>
+      <br/>
+      <button v-on:click="age++" type="button">+1</button>
+      <button v-on:click="age--" type="button">-1</button>
+      <br/>
+      <br/>
+      <button @click="add" type="button">+1</button>
+      <button @click="sub" type="button">-1</button>
+      <br/>
+      <br/>
+      <button v-on:click.once="add1(10)" type="button">+10 once</button>
+      <button v-on:click="sub1(10)" type="button">-10</button>
+      <p>{{ age }}</p>
+      <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+      <br/>
+      <a v-on:click.prevent="click" href="website">{{ website }}</a>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
